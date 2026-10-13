@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>箱根湯本食べ歩き</title>
+<title>箱根バースデー旅 フィナーレ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
@@ -122,91 +122,76 @@ a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
   .grass path:nth-child(2n){animation-delay:-1.4s}
   @keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
 }
-</style><style>h1{color:#FF8FB1}.reasons .num{background:#FF8FB1}.phone{box-shadow:8px 8px 0 #FF8FB1}.screen{background:linear-gradient(170deg,var(--sky) 0 45%,#FF8FB1 45% 100%)}</style>
-
+</style><style>
+h1{color:var(--pink)}
+.layout{grid-template-areas:"thanks" "video" "recap" "again"}
+@media (min-width:820px){.layout{grid-template-areas:"thanks video" "recap video" "again video"}}
+.thanks{grid-area:thanks}.recap{grid-area:recap}.again{grid-area:again}
+.thanks .tag{background:var(--pink);color:#fff}
+.recap .tag{background:var(--sky);color:#fff}
+.big-q{font-family:var(--f-pop);font-size:clamp(22px,5.5vw,30px);line-height:1.5;margin:0 0 12px}
+.stamps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stamps li{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;border:2.5px solid var(--edge);border-radius:16px;padding:10px 12px;background:var(--bg);min-width:0}
+.stamp{width:44px;height:44px;border-radius:50%;border:3px solid var(--pink);color:var(--pink);display:grid;place-items:center;font-family:var(--f-pop);font-size:13px;transform:rotate(-12deg)}
+.stamps b{display:block;font-size:15px;line-height:1.4}
+.stamps span{font-size:12px;color:var(--muted)}
+.complete{margin:14px 0 0;font-family:var(--f-pop);font-size:20px;color:var(--pink);text-align:center}
+.bday{font-family:var(--f-pop);font-size:clamp(28px,8vw,44px);text-align:center;color:var(--gold);-webkit-text-stroke:1.5px var(--edge);paint-order:stroke fill;text-shadow:3px 3px 0 var(--edge);margin:4px 0 10px;line-height:1.2}
+.again p{text-align:center}
+@media (prefers-reduced-motion:no-preference){
+  .stamp{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+  .stamps li:nth-child(2) .stamp{animation-delay:.1s}.stamps li:nth-child(3) .stamp{animation-delay:.2s}
+  .stamps li:nth-child(4) .stamp{animation-delay:.3s}.stamps li:nth-child(5) .stamp{animation-delay:.4s}.stamps li:nth-child(6) .stamp{animation-delay:.5s}
+  @keyframes pop{from{transform:rotate(-12deg) scale(1.6)}to{transform:rotate(-12deg) scale(1)}}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
-    <span class="badge">2日目 15:30〜17:30</span>
-    <h1>箱根湯本<br>食べ歩き</h1>
-    <p class="sub">まんじゅう！せんべい！かまぼこ！温泉街グルメ天国！</p>
+    <span class="badge">FINALE</span>
+    <h1>ありがと！</h1>
+    <p class="sub">箱根バースデー旅、これで全部おしまい！</p>
   </header>
 
   <div class="layout">
-    <section class="card about">
-      <h2>箱根湯本について <span class="tag">ABOUT</span></h2>
-      <p>パクッ！！旅の最後は<mark>箱根の玄関口・湯本の温泉街</mark>！駅を出てすぐの商店街に、おまんじゅう、おせんべい、かまぼこのお店がずらりと並ぶ、食いしん坊にはたまらないエリアです。</p>
-      <p>どこも<mark>1個から買える</mark>から、ちょっとずつ食べてはしごし放題。おみやげ探しもここで一気に済ませちゃおう！</p>
+    <section class="card thanks">
+      <h2>最後にひとこと <span class="tag">THANK YOU</span></h2>
+      <p class="big-q">楽しめましたかー？</p>
+      <p>すすきの草原を歩いて、自然薯そばをすすって、温泉でぬくぬくして、黒たまごで寿命をのばして、神社行ってスピって、まんじゅうをほおばって。</p>
+      <p>この2日間が、<mark>ずっと覚えときたい思い出</mark>になってたらめっちゃうれしいと！最後に案内人からひとことあるから、動画見てみて笑</p>
     </section>
 
-    <section class="card popular">
-      <h2>なんでこの場所が人気？ <span class="tag">WHY</span></h2>
-      <ol class="reasons">
-        <li><span class="num">1</span><div><b>焼きたて・できたてが食べられる</b><span>目の前で焼いてるお店がいっぱい。アツアツをその場でほおばれるのは食べ歩きの特権！</span></div></li>
-        <li><span class="num">2</span><div><b>ワンコインで楽しめる</b><span>数百円で買えるものが多いから、何軒まわってもお財布にやさしい。</span></div></li>
-        <li><span class="num">3</span><div><b>レトロでかわいい街並み</b><span>昭和っぽい商店街を歩くだけでテンションが上がる。おみやげ選びも楽しい！</span></div></li>
-      </ol>
-    </section>
-
-    <aside class="video" aria-label="解説動画">
+    <aside class="video" aria-label="エンディング動画">
       <div class="phone">
         <div class="screen" id="screen" style="padding:0">
           <video id="movie" src="video.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
         </div>
       </div>
-      <p class="video-label"><span>案内人がこの場所を解説！</span></p>
+      <p class="video-label"><span>案内人からのひとこと</span></p>
     </aside>
 
-    <section class="card points">
-      <h2>見どころ！！！ <span class="tag">CHECK</span></h2>
-      <ul class="spots">
-        <li><b>菊川商店</b><span>温泉マークがかわいい「カステラ焼 箱根まんじゅう」。機械で焼く様子も見られる</span></li>
-        <li><b>丸嶋本店</b><span>創業120年ほどの老舗。白と茶色の「元祖箱根温泉饅頭」</span></li>
-        <li><b>まんじゅう屋・菜の花</b><span>真っ黒な見た目にびっくり「ご黒うさん」</span></li>
-        <li><b>手焼堂</b><span>顔より大きい？ハート型の焼きたておせんべい</span></li>
-        <li><b>籠屋清次郎</b><span>小田原名物のかまぼこを揚げた、しょっぱい系のおやつ</span></li>
-        <li><b>甘いものが続いたら</b><span>ジェラートのお店やティラミスソフトのお店もあるよ</span></li>
+    <section class="card recap">
+      <h2>今回まわったとこ <span class="tag">COMPLETE</span></h2>
+      <ul class="stamps">
+        <li><span class="stamp">済</span><div><b>仙石原すすき草原</b><span>1日目 17:00</span></div></li>
+        <li><span class="stamp">済</span><div><b>じねんじょ蕎麦 九十九</b><span>1日目 18:30</span></div></li>
+        <li><span class="stamp">済</span><div><b>リブマックスリゾート</b><span>1日目 20:00</span></div></li>
+        <li><span class="stamp">済</span><div><b>大涌谷</b><span>2日目 11:40</span></div></li>
+        <li><span class="stamp">済</span><div><b>箱根神社</b><span>2日目 13:30</span></div></li>
+        <li><span class="stamp">済</span><div><b>箱根湯本 食べ歩き</b><span>2日目 15:30</span></div></li>
       </ul>
+      <p class="complete">全6か所 コンプリート！</p>
     </section>
 
-    <section class="card fee">
-      <h2>予算 <span class="tag">INFO</span></h2>
-      <div class="price"><span class="free">ワンコイン〜</span><span>1個数百円のお店が多いから、はしごし放題！</span></div>
-      <dl class="facts">
-        <dt>場所</dt><dd>箱根湯本駅前の商店街</dd>
-        <dt>時間</dt><dd>15:30〜17:30（17:30に出発）</dd>
-        <dt>コツ</dt><dd>閉店が早めのお店もあるので、気になる店から先に</dd>
-      </dl>
-      <a class="map" href="https://www.google.com/maps/search/?api=1&query=箱根湯本駅前商店街" target="_blank" rel="noopener">地図をひらく ↗</a>
-    </section>
-
-    <section class="card caution">
-      <h2>注意事項 <span class="tag">WARNING</span></h2>
-      <div class="alert">
-        <div class="alert-head">最重要</div>
-        <p><b>両手にまんじゅうを持った光凛が可愛すぎます。</b><br>食べ歩き × 光凛 ＝ <mark>直幸の財布のひもが完全にゆるむ</mark> 状態になるため、気がついたら全部のお店で買っているおそれがあります。</p>
-        <p class="small">※ 食べすぎて夜ごはんが入らなくなっても、責任は負いかねます。</p>
-      </div>
-      <ul class="cautions">
-        <li>歩きながら食べず、お店の前で食べるのがマナー</li>
-        <li>ゴミはお店に返すか、持ち帰ろう</li>
-        <li>人が多い道なので、立ち止まるときは端に寄って</li>
-      </ul>
+    <section class="card again">
+      <p class="bday">HAPPY<br>BIRTHDAY!</p>
+      <p class="big-q" style="text-align:center;margin:6px 0 0">次はどこいこか？</p>
     </section>
   </div>
 
-  <p class="foot"><a href="../finale/" style="color:inherit">おつかれさま！楽しい誕生日旅行になりますように</a></p>
+  <p class="foot">© Hakone Birthday Trip 2026</p>
 </div>
-<script>
-(function(){
-  var v=document.getElementById('movie'), sc=document.getElementById('screen');
-  v.addEventListener('loadedmetadata',function(){
-    
-    if(v.videoWidth>v.videoHeight){sc.style.aspectRatio=v.videoWidth+'/'+v.videoHeight;}
-  });
-})();
-</script>
 
 </body>
 </html>
