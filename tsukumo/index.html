@@ -152,7 +152,7 @@ a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
     <aside class="video" aria-label="解説動画">
       <div class="phone">
         <div class="screen" id="screen" style="padding:0">
-          <video id="movie" src="video.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+          <video id="movie" poster="poster.jpg" controls playsinline preload="metadata"></video>
         </div>
       </div>
       <p class="video-label"><span>案内人がこの場所を解説！</span></p>
@@ -207,5 +207,13 @@ a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 })();
 </script>
 
+<script>
+(function(){
+  var v=document.getElementById('movie'); if(!v) return;
+  fetch('video.bin').then(function(r){ if(!r.ok) throw new Error(r.status); return r.arrayBuffer(); })
+    .then(function(b){ v.src=URL.createObjectURL(new Blob([b.slice(8)],{type:'video/mp4'})); })
+    .catch(function(){});
+})();
+</script>
 </body>
 </html>
