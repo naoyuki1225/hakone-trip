@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>ブライアン・F・なおゆき</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Old+Mincho:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Special+Elite&display=swap">
+<style>
+/* Layout: 砂漠の夜に置かれた極秘の人事ファイル。左に経歴書（紙）、右の中央に案内人の動画。単一の夜色で固定 */
+:root{
+  --night:#16130F;      /* 砂漠の夜 */
+  --sand:#E9DCC0;       /* ファイルの紙 */
+  --sand-2:#D9C8A3;
+  --ink:#231C14;
+  --muted:#6B5D49;
+  --red:#B8221B;        /* 極秘スタンプ */
+  --gold:#C99A3E;
+  --line:#BFAE8A;
+  --f-display:"Dela Gothic One","Hiragino Sans",sans-serif;
+  --f-serif:"Zen Old Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --f-type:"Special Elite","Courier New",ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--night);color:var(--sand);font-family:var(--f-body);font-size:16px;line-height:1.85;
+  background-image:radial-gradient(ellipse at 50% 120%,rgba(201,154,62,.28),transparent 60%),radial-gradient(rgba(233,220,192,.06) 1px,transparent 1.2px);
+  background-size:100% 100%,26px 26px;background-attachment:fixed}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:18px;padding-block:22px 64px}
+
+.top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-family:var(--f-type);font-size:12px;letter-spacing:.18em;color:var(--gold);border-bottom:1px solid rgba(201,154,62,.4);padding-bottom:10px}
+
+.hero{padding-block:34px 30px;display:grid;gap:10px;position:relative}
+.classified{font-family:var(--f-type);font-size:13px;letter-spacing:.3em;color:var(--red);background:var(--sand);display:inline-block;padding:2px 10px;justify-self:start}
+h1{font-family:var(--f-serif);font-weight:900;font-size:clamp(36px,9vw,70px);line-height:1.15;margin:0;letter-spacing:.04em;text-wrap:balance;color:var(--sand)}
+h1 .f{color:var(--red);font-family:var(--f-display);font-weight:400}
+.en{font-family:var(--f-type);font-size:15px;color:var(--gold);letter-spacing:.12em}
+.sub{margin:0;color:#BFB49C}
+
+.layout{display:grid;gap:24px;grid-template-columns:1fr;grid-template-areas:"file" "video" "skills" "mission"}
+@media (min-width:820px){.layout{grid-template-columns:1fr 320px;column-gap:34px;grid-template-areas:"file video" "skills video" "mission video"}}
+.file{grid-area:file}.skills{grid-area:skills}.mission{grid-area:mission}
+.video{grid-area:video;align-self:center;min-width:0}
+@media (min-width:820px){.video{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px)}}
+
+/* 紙 */
+.paper{background:var(--sand);color:var(--ink);border-radius:3px;padding:26px 22px 22px;position:relative;min-width:0;
+  box-shadow:0 1px 0 var(--sand-2),0 22px 40px -22px rgba(0,0,0,.8);
+  background-image:linear-gradient(transparent 0 95%,rgba(107,93,73,.08) 95%);background-size:100% 30px}
+.paper h2{font-family:var(--f-serif);font-weight:900;font-size:22px;margin:0 0 14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.paper h2 small{font-family:var(--f-type);font-size:12px;letter-spacing:.2em;color:var(--muted);font-weight:400}
+.stamp{position:absolute;top:16px;right:14px;font-family:var(--f-display);font-size:26px;color:var(--red);border:4px solid var(--red);border-radius:6px;padding:0 10px;line-height:1.5;transform:rotate(8deg);opacity:.85;mix-blend-mode:multiply}
+
+.id{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0 0 18px;font-size:15px}
+.id dt{font-family:var(--f-type);color:var(--muted);font-size:13px;letter-spacing:.06em;padding-top:2px}
+.id dd{margin:0;min-width:0;font-weight:700}
+.redact{background:var(--ink);color:var(--ink);border-radius:2px;padding:0 .2em;user-select:none}
+.note{font-size:12px;color:var(--muted);font-weight:400}
+
+.history{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.history li{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:10px 0;border-top:1px dashed var(--line)}
+.history .yr{font-family:var(--f-type);font-size:13px;color:var(--muted);padding-top:2px}
+.history b{display:block;font-family:var(--f-serif);font-weight:700;font-size:16px;line-height:1.5}
+.history span{font-size:13px;color:var(--muted)}
+.history li.hl b{color:var(--red)}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.tags li{font-size:14px;font-weight:700;border:2px solid var(--ink);border-radius:999px;padding:2px 12px}
+.weak{border:3px double var(--red);padding:12px 14px;border-radius:4px}
+.weak b{color:var(--red);font-family:var(--f-serif);font-size:18px}
+.weak p{margin:4px 0 0;font-size:14px}
+
+.mission p{margin:0 0 10px}
+.mission .order{font-family:var(--f-serif);font-weight:900;font-size:clamp(20px,5vw,26px);line-height:1.5;color:var(--red);margin:6px 0 10px}
+.sign{font-family:var(--f-type);text-align:right;color:var(--muted);font-size:13px;margin:0}
+
+/* 動画 */
+.phone{position:relative;margin:0 auto;width:min(300px,100%);background:#050505;border-radius:36px;padding:12px;box-shadow:0 0 0 2px var(--gold),0 30px 50px -20px rgba(0,0,0,.9)}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:70px;height:6px;border-radius:6px;background:#333;z-index:2}
+.screen{aspect-ratio:9/16;width:100%;max-width:100%;border-radius:26px;overflow:hidden;background:#222}
+.screen video{width:100%;height:100%;object-fit:cover;display:block}
+.video-label{text-align:center;margin:14px 0 0;font-family:var(--f-type);font-size:13px;letter-spacing:.14em;color:var(--gold)}
+.video-label b{display:block;font-family:var(--f-serif);font-size:16px;letter-spacing:.04em;color:var(--sand)}
+
+.foot{margin-top:40px;text-align:center;font-family:var(--f-type);font-size:12px;color:#8E8370;letter-spacing:.1em}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><span>PERSONNEL FILE No.0000-F</span><span>CLASSIFIED / EYES ONLY</span></div>
+
+  <header class="hero">
+    <span class="classified">TOP SECRET</span>
+    <h1>ブライアン・<span class="f">F</span>・<br>なおゆき</h1>
+    <div class="en">BRIAN F. NAOYUKI</div>
+    <p class="sub">本ツアーの案内人。その正体は、謎に包まれている。</p>
+  </header>
+
+  <div class="layout">
+    <section class="paper file">
+      <span class="stamp">極秘</span>
+      <h2>人物ファイル <small>PROFILE</small></h2>
+      <dl class="id">
+        <dt>氏名</dt><dd>ブライアン・F・なおゆき</dd>
+        <dt>生年月日</dt><dd><span class="redact">0000年00月00日</span> <span class="note">（機密事項）</span></dd>
+        <dt>出身</dt><dd>不明 <span class="note">（本人は「箱根の山奥」と供述）</span></dd>
+        <dt>所属</dt><dd>誕生日特殊作戦部隊「<span class="redact">別班</span>」改め「光凛班」</dd>
+        <dt>Fとは</dt><dd>心の中にいる、もう一人の自分 <span class="note">（ときどき会話している姿が目撃されている）</span></dd>
+      </dl>
+
+      <h2>学歴・経歴 <small>CAREER</small></h2>
+      <ol class="history">
+        <li><span class="yr">幼少期</span><div><b>私立 黒たまご幼稚園 卒園</b><span>毎日黒たまごを食べ続け、寿命が推定280年延びる</span></div></li>
+        <li><span class="yr">小学校</span><div><b>仙石原すすき小学校 卒業</b><span>すすき草原のかくれんぼで6年間無敗。誰にも見つからなかった</span></div></li>
+        <li><span class="yr">中学校</span><div><b>自然薯中学校 卒業</b><span>粘り強さで学年1位。あだ名は「とろろ」</span></div></li>
+        <li><span class="yr">高校</span><div><b>大涌谷高等専門学校 火山ガス科 首席卒業</b><span>硫黄のにおいだけで温泉の泉質を当てられる</span></div></li>
+        <li><span class="yr">大学</span><div><b>箱根神社大学 縁結び学部 恋愛工学科 卒業</b><span>卒業論文「平和の鳥居における最適な撮影角度の研究」</span></div></li>
+        <li><span class="yr">大学院</span><div><b>ハコネード大学院 MBA 修了</b><span>MBA＝Master of Birthday Administration（誕生日経営学修士）</span></div></li>
+        <li><span class="yr">就職</span><div><b>丸湯本商事 まんじゅう事業部 入社</b><span>表向きは営業マン。まんじゅうの焼き加減を見ただけで店を当てる</span></div></li>
+        <li class="hl"><span class="yr">現在</span><div><b>極秘任務中</b><span>詳細は下の「任務」を参照</span></div></li>
+      </ol>
+    </section>
+
+    <aside class="video" aria-label="自己紹介動画">
+      <div class="phone">
+        <div class="screen" id="screen">
+          <video id="movie" src="video.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <p class="video-label">SELF INTRODUCTION<b>本人による自己紹介映像</b></p>
+    </aside>
+
+    <section class="paper skills">
+      <h2>特技と弱点 <small>SKILLS</small></h2>
+      <ul class="tags">
+        <li>6か国語で「かわいい」が言える</li>
+        <li>温泉卓球</li>
+        <li>まんじゅう早食い</li>
+        <li>ハチマキの早巻き</li>
+        <li>サングラスの着脱</li>
+      </ul>
+      <div class="weak">
+        <b>唯一の弱点：光凛</b>
+        <p>可愛すぎて、目が合うと任務の遂行が不可能になる。作戦中は直視しないよう、サングラスの着用が義務づけられている。</p>
+      </div>
+    </section>
+
+    <section class="paper mission">
+      <span class="stamp">指令</span>
+      <h2>任務 <small>MISSION</small></h2>
+      <p class="order">光凛を、最高の誕生日旅行へ護衛せよ。</p>
+      <p>この任務は国家機密である。ただし、本人にだけは全力でバレてよいこととする。</p>
+      <p class="sign">― 光凛班 司令部</p>
+    </section>
+  </div>
+
+  <p class="foot">このファイルは閲覧後も消滅しません。何度でもどうぞ。</p>
+</div>
+
+</body>
+</html>
