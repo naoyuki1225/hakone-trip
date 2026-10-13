@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>箱根神社</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: 左に説明カードが縦に4つ、右の列の真ん中にスマホ型の動画プレーヤー。スマホでは動画が2番目のカードの後に入る */
+:root{
+  --bg:#FFF8E1;        /* 秋の日差し */
+  --card:#FFFFFF;
+  --ink:#2B2118;
+  --muted:#6E6153;
+  --gold:#F2B21B;      /* すすきの穂 */
+  --gold-deep:#C9860A;
+  --sky:#5EC4E8;       /* 箱根の青空 */
+  --pink:#FF7A8A;
+  --edge:#2B2118;      /* ステッカーのふち */
+  --f-pop:"Dela Gothic One","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-body:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1D1913;--card:#2A241C;--ink:#FFF4DC;--muted:#C7B9A3;--gold:#F5BE3A;--gold-deep:#F5BE3A;
+  --sky:#4BB2D8;--pink:#FF8A98;--edge:#0E0B08;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1D1913;--card:#2A241C;--ink:#FFF4DC;--muted:#C7B9A3;--gold:#F5BE3A;--gold-deep:#F5BE3A;
+  --sky:#4BB2D8;--pink:#FF8A98;--edge:#0E0B08;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;margin:0;
+  background-image:radial-gradient(var(--gold) 1.2px,transparent 1.3px);background-size:22px 22px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:var(--bg);opacity:.86;z-index:-1}
+.wrap{max-width:1000px;margin:0 auto;padding-inline:18px;padding-block:20px 64px;position:relative}
+
+/* タイトル */
+.hero{text-align:center;padding-block:26px 30px;display:grid;justify-items:center;gap:10px}
+.badge{display:inline-block;font-weight:800;font-size:13px;background:var(--sky);color:#fff;padding:4px 14px;border-radius:999px;border:2.5px solid var(--edge);transform:rotate(-3deg);letter-spacing:.06em}
+h1{font-family:var(--f-pop);font-weight:400;font-size:clamp(34px,9vw,64px);line-height:1.2;margin:0;letter-spacing:.02em;text-wrap:balance;
+  color:var(--gold);-webkit-text-stroke:2px var(--edge);paint-order:stroke fill;text-shadow:4px 4px 0 var(--edge)}
+.sub{font-weight:700;color:var(--muted);margin:0}
+.grass{width:min(420px,100%);height:60px;display:block}
+
+/* 2列レイアウト */
+.layout{display:grid;gap:22px;grid-template-columns:1fr;
+  grid-template-areas:"about" "popular" "video" "points" "fee" "caution"}
+@media (min-width:820px){
+  .layout{grid-template-columns:1fr 320px;column-gap:32px;
+    grid-template-areas:"about video" "popular video" "points video" "fee video" "caution video"}
+}
+.about{grid-area:about}.popular{grid-area:popular}.points{grid-area:points}.fee{grid-area:fee}.caution{grid-area:caution}
+.caution{background:repeating-linear-gradient(-45deg,var(--gold) 0 14px,var(--edge) 14px 28px);padding:10px}
+.caution > *{background:var(--card)}
+.caution h2{margin:0;padding:14px 16px 4px;border-radius:14px 14px 0 0}
+.caution .tag{background:var(--pink);color:#fff}
+.alert{padding:6px 16px 14px}
+.alert-head{display:inline-block;font-family:var(--f-pop);font-size:14px;color:#fff;background:var(--pink);border:2.5px solid var(--edge);border-radius:8px;padding:0 10px;transform:rotate(-2deg);margin-bottom:6px}
+.alert p{margin:0 0 8px;font-size:17px;line-height:1.75}
+.alert p b{font-size:20px}
+.alert .small{font-size:13px;color:var(--muted)}
+.cautions{margin:0;padding:12px 16px 16px 36px;border-top:2.5px dashed var(--line,var(--muted));border-radius:0 0 14px 14px;font-size:14px;color:var(--muted);display:grid;gap:4px}
+.video{grid-area:video;align-self:center;min-width:0}
+
+/* カード */
+.card{background:var(--card);border:3px solid var(--edge);border-radius:22px;padding:22px 22px 20px;box-shadow:6px 6px 0 var(--edge);min-width:0}
+.card h2{font-family:var(--f-pop);font-weight:400;font-size:24px;line-height:1.35;margin:0 0 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{font-family:var(--f-body);font-weight:800;font-size:12px;padding:2px 10px;border-radius:999px;border:2px solid var(--edge);color:var(--edge);background:var(--gold)}
+.popular .tag{background:var(--sky);color:#fff}
+.points .tag{background:var(--pink);color:#fff}
+.fee .tag{background:var(--card);color:var(--ink)}
+.card p{margin:0 0 10px}.card p:last-child{margin:0}
+mark{background:linear-gradient(transparent 58%,var(--gold) 58%);color:inherit;padding:0 2px}
+
+.reasons{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.reasons li{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start}
+.reasons .num{width:40px;height:40px;border-radius:50%;background:var(--sky);color:#fff;border:2.5px solid var(--edge);display:grid;place-items:center;font-family:var(--f-pop);font-size:18px}
+.reasons b{display:block;font-size:17px;line-height:1.5}
+.reasons span{color:var(--muted);font-size:15px}
+
+.spots{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.spots li{border:2.5px dashed var(--pink);border-radius:16px;padding:12px 14px;min-width:0}
+.spots b{display:block;font-size:16px;color:var(--pink)}
+.spots span{font-size:14px;color:var(--muted);line-height:1.7;display:block}
+
+.season{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3px;margin:14px 0 4px}
+.season div{display:grid;gap:3px;text-align:center;font-size:11px;font-weight:700;color:var(--muted)}
+.season i{display:block;height:26px;border-radius:6px;border:2px solid var(--edge)}
+.season .best{color:var(--ink)}
+.season-note{font-size:13px;color:var(--muted);margin:0}
+
+.price{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.free{font-family:var(--f-pop);font-size:46px;line-height:1;color:var(--pink);-webkit-text-stroke:1.5px var(--edge);paint-order:stroke fill;transform:rotate(-4deg);display:inline-block}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;margin:14px 0 0;font-size:14px}
+.facts dt{font-weight:800}
+.facts dd{margin:0;color:var(--muted);min-width:0}
+.map{display:inline-block;margin-top:14px;font-weight:800;font-size:14px;text-decoration:none;color:var(--edge);background:var(--gold);border:2.5px solid var(--edge);border-radius:999px;padding:6px 16px;box-shadow:3px 3px 0 var(--edge)}
+.map:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--edge)}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+
+/* 動画（スマホ型） */
+.phone{position:relative;margin:0 auto;width:min(300px,100%);background:var(--edge);border-radius:36px;padding:12px;box-shadow:8px 8px 0 var(--gold)}
+.phone::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:70px;height:6px;border-radius:6px;background:#444;z-index:2}
+.screen{aspect-ratio:9/16;width:100%;max-width:100%;border-radius:26px;overflow:hidden;display:grid;place-items:center;text-align:center;padding:20px;
+  background:linear-gradient(170deg,var(--sky) 0 45%,var(--gold) 45% 100%);color:#fff}
+.screen video{width:100%;height:100%;object-fit:cover;display:block}
+.screen .ph{display:grid;gap:10px;justify-items:center}
+.play{width:64px;height:64px;border-radius:50%;background:#fff;border:3px solid var(--edge);display:grid;place-items:center}
+.play::after{content:"";border-left:20px solid var(--pink);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.ph b{font-family:var(--f-pop);font-weight:400;font-size:20px;-webkit-text-stroke:1px var(--edge);paint-order:stroke fill;text-shadow:2px 2px 0 var(--edge)}
+.ph small{font-weight:800;font-size:13px;color:var(--edge);background:#fff;border-radius:999px;padding:2px 10px;border:2px solid var(--edge)}
+.video-label{text-align:center;font-weight:800;margin:14px 0 0;font-size:15px}
+.video-label span{display:inline-block;background:var(--pink);color:#fff;border:2.5px solid var(--edge);border-radius:999px;padding:2px 14px;transform:rotate(2deg)}
+@media (min-width:820px){.video{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px)}}
+
+.foot{margin-top:40px;text-align:center;font-size:13px;color:var(--muted);font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .grass path{transform-origin:bottom;animation:sway 3.2s ease-in-out infinite alternate}
+  .grass path:nth-child(2n){animation-delay:-1.4s}
+  @keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+}
+</style><style>h1{color:#FF5C4A}.reasons .num{background:#FF5C4A}.phone{box-shadow:8px 8px 0 #FF5C4A}.screen{background:linear-gradient(170deg,var(--sky) 0 45%,#FF5C4A 45% 100%)}</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <span class="badge">2日目 13:30 ごろ到着</span>
+    <h1>箱根神社</h1>
+    <p class="sub">湖に浮かぶ赤い鳥居！箱根最強のパワースポット！</p>
+  </header>
+
+  <div class="layout">
+    <section class="card about">
+      <h2>箱根神社について <span class="tag">ABOUT</span></h2>
+      <p>シャキーン！！芦ノ湖のほとり、大きな杉の木に囲まれた<mark>箱根いちばんのパワースポット</mark>！奈良時代から続く歴史ある神社で、境内に入ると空気がスッと変わるのを感じます。</p>
+      <p>主役はなんといっても、湖の中に立つ<mark>真っ赤な「平和の鳥居」</mark>。青い湖と赤い鳥居の組み合わせは、一度は見ておきたい箱根の名場面です。</p>
+    </section>
+
+    <section class="card popular">
+      <h2>なんでこの場所が人気？ <span class="tag">WHY</span></h2>
+      <ol class="reasons">
+        <li><span class="num">1</span><div><b>湖に浮かぶ鳥居</b><span>水の上に立つ鳥居なんてなかなか見られない！写真を撮るための行列ができるほどの人気ぶり。</span></div></li>
+        <li><span class="num">2</span><div><b>縁結びで有名</b><span>境内にある「九頭龍神社 新宮」は、縁結びの神様として大人気。カップルで行く価値大です。</span></div></li>
+        <li><span class="num">3</span><div><b>森の空気が気持ちいい</b><span>樹齢何百年という杉の大木がずらり。歩くだけで心が整う感じがします。</span></div></li>
+      </ol>
+    </section>
+
+    <aside class="video" aria-label="解説動画">
+      <div class="phone">
+        <div class="screen" id="screen" style="padding:0">
+          <video id="movie" src="video.mp4" poster="poster.jpg" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+      <p class="video-label"><span>案内人がこの場所を解説！</span></p>
+    </aside>
+
+    <section class="card points">
+      <h2>見どころ！！！ <span class="tag">CHECK</span></h2>
+      <ul class="spots">
+        <li><b>平和の鳥居で記念撮影</b><span>湖をバックにパシャリ。昭和27年に建てられた、神社のシンボル</span></li>
+        <li><b>龍神水</b><span>9つの龍の口から流れる水。口に含むと心身が清められると言われている</span></li>
+        <li><b>矢立の杉</b><span>樹齢1200年をこえるといわれる、超巨大な御神木</span></li>
+      </ul>
+    </section>
+
+    <section class="card fee">
+      <h2>参拝料 <span class="tag">INFO</span></h2>
+      <div class="price"><span class="free">0円！</span><span>お参りはタダ！おさい銭とおみくじ代は用意しておこう</span></div>
+      <dl class="facts">
+        <dt>駐車場</dt><dd>無料（混んでいることも）</dd>
+        <dt>宝物殿</dt><dd>見学する場合は別料金</dd>
+        <dt>歩く距離</dt><dd>本殿まで石段あり</dd>
+      </dl>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=箱根神社" target="_blank" rel="noopener">地図をひらく ↗</a>
+    </section>
+
+    <section class="card caution">
+      <h2>注意事項 <span class="tag">WARNING</span></h2>
+      <div class="alert">
+        <div class="alert-head">最重要</div>
+        <p><b>鳥居の前に立つ光凛が可愛すぎます。</b><br>赤い鳥居 × 光凛 ＝ <mark>神様もびっくりの一枚</mark> になるため、直幸は撮影中に手が震えないよう注意してください。</p>
+        <p class="small">※ 縁結びのご利益が強すぎて、直幸がこれ以上好きになってしまうおそれがあります。覚悟して参拝してください。</p>
+      </div>
+      <ul class="cautions">
+        <li>平和の鳥居の撮影は行列になることも。時間に余裕を持って</li>
+        <li>石段が多いので、歩きやすい靴で</li>
+        <li>湖に落ちないように気をつけよう</li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="foot"><a href="../yumoto/" style="color:inherit">次のスポット → 箱根湯本で食べ歩き（15:30）</a></p>
+</div>
+<script>
+(function(){
+  var v=document.getElementById('movie'), sc=document.getElementById('screen');
+  v.addEventListener('loadedmetadata',function(){
+    
+    if(v.videoWidth>v.videoHeight){sc.style.aspectRatio=v.videoWidth+'/'+v.videoHeight;}
+  });
+})();
+</script>
+
+</body>
+</html>
